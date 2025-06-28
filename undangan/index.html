@@ -1,192 +1,128 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan Pernikahan - Qoribun & Nurul</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Pernikahan - Aisyah & Yusuf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap');
-
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(120deg, #fff0f0, #ffe4e1);
+      font-family: 'Poppins', sans-serif;
+      background: #fdfcfb;
       color: #333;
-      overflow-x: hidden;
     }
-
     header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg') center/cover;
+      height: 100vh;
       text-align: center;
-      padding: 60px 20px 30px;
-      background-color: #fff;
-    }
-
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      color: #b85c5c;
-    }
-
-    h2 {
-      margin-top: -10px;
-      font-size: 1.2em;
-      font-weight: normal;
-      color: #777;
-    }
-
-    .couple {
+      color: white;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      margin: 40px 0;
+      animation: fadeIn 3s ease-in-out;
     }
-
-    .person {
+    header h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 2.2em;
-      color: #a24c4c;
-      margin: 0 20px;
-      animation: float 4s ease-in-out infinite;
+      font-size: 60px;
     }
-
-    .heart {
-      font-size: 2.5em;
-      color: red;
-      animation: beat 1s infinite;
+    .bismillah {
+      font-size: 30px;
+      margin-bottom: 20px;
+      font-style: italic;
+      color: #eee;
     }
-
-    .info {
+    section {
+      padding: 50px 20px;
       text-align: center;
-      padding: 30px 20px;
     }
-
-    .gallery {
-      display: flex;
-      overflow-x: auto;
-      padding: 20px;
-      gap: 15px;
-      scroll-behavior: smooth;
-    }
-
     .gallery img {
-      height: 200px;
+      width: 200px;
+      height: auto;
+      margin: 10px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
-
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
     form {
-      text-align: center;
-      margin: 30px auto;
       max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
     }
-
-    input, select, textarea, button {
-      width: 100%;
-      padding: 10px;
+    form input, form textarea, form button {
       margin: 10px 0;
+      padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
+      border-radius: 5px;
     }
-
-    button {
-      background-color: #b85c5c;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #a74c4c;
-    }
-
     footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-    }
-
-    .share {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .share a {
-      background-color: #25D366;
+      background: #333;
       color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+    }
+    .to-name {
       font-weight: bold;
-      display: inline-block;
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 20px;
     }
 
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
   </style>
 </head>
 <body>
 
-  <!-- Musik Latar -->
-  <audio autoplay loop hidden>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<!-- Musik Latar -->
+<audio autoplay loop>
+  <source src="musik-nikah.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung audio.
+</audio>
 
-  <header>
-    <h1>Qoribun & Nurul</h1>
-    <h2>Selasa,5 Agustus 2025 • Rumah mempelai wanita</h2>
-  </header>
+<!-- Pembukaan -->
+<header>
+  <div class="bismillah">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <p>Dengan memohon rahmat dan ridha Allah SWT, kami mengundang Bapak/Ibu/Saudara/i:</p>
+  <div class="to-name">[Nama Tamu Undangan]</div>
+  <h1>Aisyah & Yusuf</h1>
+  <p>Insya Allah akan melangsungkan pernikahan</p>
+  <p>Sabtu, 10 Agustus 2025 | 10.00 WIB</p>
+  <p>di Masjid Al-Hikmah, Bandung</p>
+</header>
 
-  <section class="couple">
-    <div class="person">Nurul</div>
-    <div class="heart">💖</div>
-    <div class="person">Qoribun</div>
-  </section>
+<!-- Galeri Foto -->
+<section>
+  <h2>Galeri Cinta Kami</h2>
+  <div class="gallery">
+    <img src="foto1.jpg" alt="foto 1">
+    <img src="foto2.jpg" alt="foto 2">
+    <img src="foto3.jpg" alt="foto 3">
+  </div>
+</section>
 
-  <section class="info">
-    <p>Dengan penuh sukacita kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.</p>
-    <p>Acara akan dilaksanakan pada:</p>
-    <p><strong>Selasa, 5 Agustus 2025</strong><br>pukul 10.00 WIB s/d selesai</p>
-    <p><strong>Rumah mempelai wanita, Brebes</strong></p>
-  </section>
-
-  <!-- Galeri Foto -->
-  <section class="gallery">
-    <img src="https://qori-bun.github.io/undangan=bg.webp" alt="bg.webp" />
-    <img src="https://via.placeholder.com/300x200?text=Foto+2" alt="cewe.webp" />
-    <img src="https://via.placeholder.com/300x200?text=Foto+3" alt="cowo.webp" />
-  </section>
-
-  <!-- Form RSVP -->
-  <form>
-    <h3>Konfirmasi Kehadiran</h3>
-    <input type="text" placeholder="Nama Anda" required />
-    <select>
-      <option value="">Apakah Anda akan hadir?</option>
-      <option value="hadir">Ya, saya akan hadir</option>
-      <option value="tidak">Maaf, saya tidak bisa hadir</option>
-    </select>
-    <textarea rows="3" placeholder="Ucapan atau doa..."></textarea>
+<!-- Konfirmasi Kehadiran -->
+<section>
+  <h2>Konfirmasi Kehadiran</h2>
+  <form action="https://your-form-endpoint.com" method="POST">
+    <input type="text" name="nama" placeholder="Nama Anda" required>
+    <input type="text" name="jumlah" placeholder="Jumlah yang hadir" required>
+    <textarea name="ucapan" placeholder="Ucapan / Doa" rows="4"></textarea>
     <button type="submit">Kirim</button>
   </form>
+</section>
 
-  <!-- Tombol Share -->
-  <div class="share">
-    <a href="https://wa.me/?text=Yuk%20hadiri%20pernikahan%20Anisa%20%26%20Rizky%20pada%2012%20Juli%202025!%20Detail%20undangan:%20[LINK_UNDANGAN]" target="_blank">Bagikan via WhatsApp</a>
-  </div>
-
-  <footer>
-    <p>Terima kasih atas doa dan restunya 🌸</p>
-  </footer>
+<!-- Penutup -->
+<footer>
+  <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+  <p>Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>
+  <p>Hormat Kami,<br>Aisyah & Yusuf</p>
+</footer>
 
 </body>
 </html>
